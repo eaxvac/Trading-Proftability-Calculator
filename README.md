@@ -20,9 +20,7 @@ Output parameters:
 
 License
 ----
-
-MIT
-
+GNU v3
   Trading Profitability Calculator https://github.com/eaxvac/Trading-Proftability-Calculator
     Copyright (C) 2016  eaxvac/lastbattle
 
