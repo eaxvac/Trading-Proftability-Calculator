@@ -104,14 +104,20 @@ namespace WpfApplication1
 
 
             bool isLongPosition = entryPrice < takeProfit;
-            double percentageDifference_Win = (isLongPosition ? (takeProfit - entryPrice) : (entryPrice - takeProfit)) / 100;
-            double percentageDifference_loss = (isLongPosition ? (entryPrice - stopLoss) : (stopLoss - entryPrice)) / 100;
-            double totalPosition = amount * leverage;
+            double totalPosition = amount * entryPrice;
+
+            double percentageDifference_Win = (isLongPosition ? (takeProfit - entryPrice) : (entryPrice - takeProfit)) * amount / totalPosition;
+            double percentageDifference_loss = (isLongPosition ? (entryPrice - stopLoss) : (stopLoss - entryPrice)) * amount / totalPosition;
 
             // update
             viewModel.MaxPossibleGains = percentageDifference_Win * totalPosition;
+            viewModel.WinPercentage = percentageDifference_Win * 100f * leverage;
+
             viewModel.MaxPossibleLoss = percentageDifference_loss * totalPosition;
+            viewModel.LossPercentage = percentageDifference_loss * 100f * leverage;
+
             viewModel.Exposure = totalPosition;
+            viewModel.UsedMargin = totalPosition / leverage;
             viewModel.RiskReward = percentageDifference_Win > percentageDifference_loss ? ((percentageDifference_Win/percentageDifference_loss) +" : 1") : ("1 : " + (percentageDifference_loss / percentageDifference_Win));
         }
         #endregion

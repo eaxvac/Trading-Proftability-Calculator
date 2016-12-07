@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApplication1"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:converter="clr-namespace:WpfApplication1.Converter"
-        
+        MinHeight="380"
         mc:Ignorable="d"
         Title="Trading Profitability Calculator" Height="350" Width="525">
 
@@ -80,12 +80,26 @@
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <TextBlock Text="Max possible gains: $" FontSize="23"/>
                     <TextBlock Text="{Binding MaxPossibleGains, Converter={StaticResource integerCommasSeperatorConverter}}" FontSize="23"/>
+
+                    <TextBlock Text="(" FontSize="23" Padding="5,0,0,0"/>
+                    <TextBlock Text="{Binding WinPercentage, Converter={StaticResource integerCommasSeperatorConverter}}" FontSize="23"/>
+                    <TextBlock Text="%)" FontSize="23" />
                 </StackPanel>
 
                 <!-- Max possible loss -->
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <TextBlock Text="Max possible loss: $" FontSize="23"/>
                     <TextBlock Text="{Binding MaxPossibleLoss, Converter={StaticResource integerCommasSeperatorConverter}}" FontSize="23"/>
+
+                    <TextBlock Text="(" FontSize="23" Padding="5,0,0,0"/>
+                    <TextBlock Text="{Binding LossPercentage, Converter={StaticResource integerCommasSeperatorConverter}}" FontSize="23"/>
+                    <TextBlock Text="%)" FontSize="23" />
+                </StackPanel>
+
+                <!-- Used margin -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock Text="Used margin: $" FontSize="23"/>
+                    <TextBlock Text="{Binding UsedMargin, Converter={StaticResource integerCommasSeperatorConverter}}" FontSize="23"/>
                 </StackPanel>
             </StackPanel>
         </Grid>

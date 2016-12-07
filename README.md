@@ -2,7 +2,7 @@
 A quick and easy way to calculate your trading positions upon entry.
 One problem with platforms such as Oanda is that it does not automatically calculate the amount that you might potentially win or loss when placing your orders, and it leads to unexpected results when you want to place trades of different tickers denonated in different price. 
 
-![alt tag](http://i.imgur.com/3CXxRmU.png)
+![alt tag](http://i.imgur.com/pNlZi9u.png)
 
 Input parameters:
   - Amount

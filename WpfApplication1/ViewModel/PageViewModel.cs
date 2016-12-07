@@ -45,6 +45,17 @@ namespace WpfApplication1.ViewModel
             }
         }
 
+        private double _WinPercentage = 0;
+        public double WinPercentage
+        {
+            get { return _WinPercentage; }
+            set
+            {
+                this._WinPercentage = value;
+                OnPropertyChanged("WinPercentage");
+            }
+        }
+
         private double _MaxPossibleLoss = 0;
         public double MaxPossibleLoss
         {
@@ -53,6 +64,28 @@ namespace WpfApplication1.ViewModel
             {
                 this._MaxPossibleLoss = value;
                 OnPropertyChanged("MaxPossibleLoss");
+            }
+        }
+
+        private double _LossPercentage = 0;
+        public double LossPercentage
+        {
+            get { return _LossPercentage; }
+            set
+            {
+                this._LossPercentage = value;
+                OnPropertyChanged("LossPercentage");
+            }
+        }
+
+        private double _UsedMargin = 0;
+        public double UsedMargin
+        {
+            get { return _UsedMargin; }
+            set
+            {
+                this._UsedMargin = value;
+                OnPropertyChanged("UsedMargin");
             }
         }
 
