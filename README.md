@@ -2,7 +2,7 @@
 A quick and easy way to calculate your trading positions upon entry.
 One problem with platforms such as Oanda is that it does not automatically calculate the amount that you might potentially win or loss when placing your orders, and it leads to unexpected results when you want to place trades of different tickers denonated in different price. 
 
-![alt tag](http://i.imgur.com/pNlZi9u.png)
+![alt tag](http://i.imgur.com/3CXxRmU.png)
 
 Input parameters:
   - Amount
@@ -20,7 +20,9 @@ Output parameters:
 
 License
 ----
-GNU v3
+
+MIT
+
   Trading Profitability Calculator https://github.com/eaxvac/Trading-Proftability-Calculator
     Copyright (C) 2016  eaxvac/lastbattle
 
@@ -36,3 +38,7 @@ GNU v3
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+# Universal Windows 10 app download link:
+https://www.microsoft.com/store/apps/9pp1wx9r2cld
